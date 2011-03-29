@@ -1,0 +1,14 @@
+name = Harvest Baptist Church
+description = Custom theme for Harvest Baptist Church
+screenshot = images/screenshot.png
+core = 7.x
+
+stylesheets[all][] = css/style.css
+stylesheets[all][] = css/960.css
+
+regions[header]         = Header
+regions[content_top]    = Content Top
+regions[sidebar]        = Sidebar
+regions[content]        = Content Middle
+regions[content_bottom] = Content Bottom
+regions[footer]         = Footer
