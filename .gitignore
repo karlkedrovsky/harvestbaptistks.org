@@ -1,2 +1,3 @@
-htdocs/sites/default/files/*
+htdocs/sites/*/files/*
+htdocs/sites/*/private/*
 
