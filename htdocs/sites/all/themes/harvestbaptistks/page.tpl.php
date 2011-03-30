@@ -23,9 +23,6 @@
 
   <div id="content-middle" class="clearfix">
     <?php if ($page['sidebar']): ?>
-      <div class="grid_3">
-        <?php print render($page['sidebar']); ?>
-      </div>
       <div class="grid_9">
     <?php else: ?>
       <div class="grid_12">
@@ -45,6 +42,11 @@
         <?php print render($page['content']); ?>
       </div>
     </div>
+    <?php if ($page['sidebar']): ?>
+      <div class="grid_3">
+        <?php print render($page['sidebar']); ?>
+      </div>
+    <?php endif; ?>
   </div>
 
   <?php if ($page['content_bottom']): ?>

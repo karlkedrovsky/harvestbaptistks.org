@@ -194,10 +194,10 @@ a:hover { color: #4186d3; }
 
 /**
  * Primary styles
- *
+ * 373737
  */
 
-body { background-color: #373737; }
+body { background-color: #8b8b8b; }
 
 p { line-height: 1.5em; }
 .submitted { margin: 5px 0 5px 0; font-style: italic; }
@@ -205,9 +205,12 @@ p { line-height: 1.5em; }
 .content p { margin-bottom: 10px; }
 #main-content .content p img { padding: 5px; }
 
-#page { background-color: #fff; padding-bottom: 10px; }
+#page { background-color: #fff; padding-bottom: 10px; margin-bottom: 40px; border-radius: 0 0 10px 10px / 0 0 10px 10px; -moz-border-radius: 0 0 10px 10px / 0 0 10px 10px; 
+-moz-box-shadow: 0 0 5px 5px #595959;
+-webkit-box-shadow: 0 0 5px 5px #595959;
+box-shadow: 0 0 5px 5px #595959; }
 
-#header { width: 940px; margin: 0; padding: 20px 0 20px 20px; color: #fff; }
+#header { width: 940px; margin: 0; padding: 20px 0 20px 10px; color: #fff; }
 #site-name { font-family: MuseoSlab500; font-size: 64px; font-weight: bold; }
 #site-name .orange { color: #ff5900; font-style: italic; }
 #site-name .dark-grey { color: #595959; }
@@ -219,23 +222,35 @@ p { line-height: 1.5em; }
 .front #content-top ul li a { font-size: 16px; color: #fff; text-decoration: none; }
 .front #content-top ul li a:hover { color: #4186d3; }
 
+#primary-nav { padding: 0; margin: 0 0 40px 0px; font-size: 16px; background-color: #ff5900; width: 960px; }
 /*
-#primary-nav { padding: 20px 0 20px 20px; margin: 0; font-size: 16px; background-color: #ff5900; width: 940px; border-top: 5px solid #a63a00; border-bottom: 5px solid #a63a00; }
-*/
 #primary-nav { padding: 20px 0 20px 20px; margin: 0; font-size: 16px; }
-#primary-nav ul { margin: 0; padding: 0; }
-#primary-nav ul li { margin: 0; padding: 0 10px 0 10px; list-style: none; float: left; border-right: 1px solid #666; }
+*/
+#primary-nav ul { margin: 0; padding: 0 10px 0 10px; vertical-align: middle; }
+#primary-nav ul li { margin: 0; padding: 20px; list-style: none; float: left; border-right: 1px solid #fff; }
 #primary-nav ul li.first { padding-left: 0; }
 #primary-nav ul li.last { border-right: none; }
+#primary-nav ul li a { font-size: 24px; color: #fff; text-decoration: none; }
 
 #content-top { marging-top: 20px; margin-bottom:20px; }
 #content-top div { float: left; }
 
 #content-middle { marging-top: 20px; margin-bottom:20px; }
-#content-middle h1 { padding: 0 10px; }
-#content-middle #main-content { padding: 10px 10px 0 10px; }
+#content-middle h1 { padding: 0; }
+#content-middle #main-content { padding: 10px 0 0 0; }
+
 
 #content-bottom { marging-top: 20px; margin-bottom:20px; }
+#content-bottom .block, .region-sidebar .block { border: 1px solid #eaeaea; -moz-border-radius: 10px; border-radius: 10px; }
+#content-bottom .block p, .region-sidebar .block p { padding-left: 10px; padding-right: 10px; }
+#content-bottom .block h2, .region-sidebar .block h2 { padding: 10px 10px 10px 10px;
+  background-image: -moz-linear-gradient(100% 100% 90deg, #fff, #eaeaea);
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#1a82f7), to(#2F2727));
+  background-image: -webkit-linear-gradient(#444444, #999999); 
+  background-image: -o-linear-gradient(top, #444444, #999999);
+  border-radius: 8px 8px 0 0 / 8px 8px 0 0;
+  -moz-border-radius: 8px 8px 0 0 / 8px 8px 0 0;
+}
 
 #footer { marging-top: 20px; margin-bottom:20px; }
 #footer ul li { margin:0; padding:0 10px 0 10px; list-style:none; float:left; border-right:1px solid #444; }
