@@ -1,3 +1,6 @@
+@import url(http://fonts.googleapis.com/css?family=Josefin+Sans:regular,regularitalic,bold,bolditalic);
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans:regular,bold);
+
 /**
  * HTML5 ✰ Boilerplate
  *
@@ -85,7 +88,7 @@ input, select { vertical-align: middle; }
   font-style: italic;
 }
 
-body { font:13px/1.231 sans-serif; *font-size:small; } /* Hack retained to preserve specificity */
+body { font-size: 13px; font-family: 'Droid Sans',sans-serif; *font-size:small; } /* Hack retained to preserve specificity */
 select, input, textarea, button { font:99% sans-serif; }
 
 /* Normalize monospace sizing:
@@ -103,7 +106,6 @@ html { overflow-y: scroll; }
 /* Accessible focus treatment: people.opera.com/patrickl/experiments/keyboard/test */
 a:hover, a:active { outline: none; }
 
-ul, ol { margin-left: 2em; }
 ol { list-style-type: decimal; }
 
 /* Remove margins for navigation lists */
@@ -178,9 +180,9 @@ body, select, input, textarea {
 }
 
 /* Headers (h1, h2, etc) have no default font-size or margin; define those yourself */
-h1, h2, h3, h4, h5, h6 { font-weight: bold; color: #ff5900; }
-h1 { font-size: 24px; }
-h2, h3, h4, h5, h6 { font-size: 14px; }
+h1, h2, h3, h4, h5, h6 { font-family: 'Josefin Sans'; font-weight: bold; color: #ff5900; }
+h1 { font-size: 36px; }
+h2, h3, h4, h5, h6 { font-size: 20px; }
 h2 a, h3 a, h4 a, h5 a, h6 a { color: #ff5900; text-decoration: none; }
 h2 a:active, h2 a:visited,
 h3 a:active, h3 a:visited,
@@ -188,7 +190,7 @@ h4 a:active, h4 a:visited,
 h5 a:active, h5 a:visited,
 h6 a:active, h6 a:visited { color: #ff5900; text-decoration: none; }
 
-a, a:active, a:visited { color: #0d56a6; }
+a, a:active, a:visited { color: #0d56a6; text-decoration: none; }
 a:hover { color: #4186d3; }
 
 
@@ -201,6 +203,7 @@ body { background-color: #8b8b8b; }
 
 p { line-height: 1.5em; }
 .submitted { margin: 5px 0 5px 0; font-style: italic; }
+ul.inline li { padding: 0 10px 0 0; }
 
 .content p { margin-bottom: 10px; }
 #main-content .content p img { padding: 5px; }
@@ -211,15 +214,16 @@ p { line-height: 1.5em; }
 box-shadow: 0 0 5px 5px #595959; }
 
 #header { width: 940px; margin: 0; padding: 20px 0 20px 10px; color: #fff; }
-#site-name { font-family: MuseoSlab500; font-size: 64px; font-weight: bold; }
+#site-name { font-family: 'Josefin Sans'; font-size: 64px; font-weight: bold; }
 #site-name .orange { color: #ff5900; font-style: italic; }
 #site-name .dark-grey { color: #595959; }
 
 .front #content-top { background-color: #ff5900; width: 960px; margin: 0 0 20px; padding: 0; }
 .front #content-top img { border: none; margin: 0 0 -4px 0; padding: 0; }
-.front #content-top ul { margin: 0; padding: 0; }
-.front #content-top ul li { list-style: none; margin: 0; padding: 40px 0 0 40px; }
-.front #content-top ul li a { font-size: 16px; color: #fff; text-decoration: none; }
+.front #content-top ul { margin: 0; padding: 0; width: 360px; }
+.front #content-top ul li { list-style: none; margin: 0; padding: 25px 0 25px 40px; border-bottom: 1px solid #fff; }
+.front #content-top ul li.last { border-bottom: none; }
+.front #content-top ul li a { font-size: 20px; color: #fff; text-decoration: none; }
 .front #content-top ul li a:hover { color: #4186d3; }
 
 #primary-nav { padding: 0; margin: 0 0 40px 0px; font-size: 16px; background-color: #ff5900; width: 960px; }
@@ -243,7 +247,7 @@ box-shadow: 0 0 5px 5px #595959; }
 #content-bottom { marging-top: 20px; margin-bottom:20px; }
 #content-bottom .block, .region-sidebar .block { border: 1px solid #eaeaea; -moz-border-radius: 10px; border-radius: 10px; }
 #content-bottom .block p, .region-sidebar .block p { padding-left: 10px; padding-right: 10px; }
-#content-bottom .block h2, .region-sidebar .block h2 { padding: 10px 10px 10px 10px;
+#content-bottom .block h2, .region-sidebar .block h2 { padding: 8px 10px 10px 10px;
   background-image: -moz-linear-gradient(100% 100% 90deg, #fff, #eaeaea);
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#1a82f7), to(#2F2727));
   background-image: -webkit-linear-gradient(#444444, #999999); 

@@ -2,7 +2,7 @@
 
   <div id="header" class="grid_12 clearfix">
     <?php if ($site_name): ?>
-      <div id="site-name"><span class="orange">Harvest</span> <span class="dark-grey">Baptist Church</span><?php //print $site_name; ?></div>
+      <div id="site-name"><a href="/"><span class="orange">Harvest</span> <span class="dark-grey">Baptist Church</span><?php //print $site_name; ?></a></div>
     <?php endif; ?>
     <?php if ($site_slogan): ?>
       <div id="site-slogan"><?php print $site_slogan; ?></div>
