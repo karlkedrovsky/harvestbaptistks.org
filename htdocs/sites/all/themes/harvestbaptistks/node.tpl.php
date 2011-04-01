@@ -89,22 +89,28 @@
   <?php endif; ?>
   <?php print render($title_suffix); ?>
 
-  <?php if ($display_submitted): ?>
+  <?php if (!$view_mode == 'teaser' && $display_submitted): ?>
     <div class="submitted">
       <?php print $submitted; ?>
     </div>
   <?php endif; ?>
 
-  <div class="content"<?php print $content_attributes; ?>>
-    <?php
-      // We hide the comments and links now so that we can render them later.
-      hide($content['comments']);
-      hide($content['links']);
-      print render($content);
-    ?>
+  <div class="content clearfix"<?php print $content_attributes; ?>>
+    <?php if ($view_mode == 'teaser' && $display_submitted): ?>
+      <div class="submitted">
+        <?php print $submitted; ?>
+      </div>
+    <?php endif; ?>
+    <div class="content-inner">
+      <?php
+        // We hide the comments and links now so that we can render them later.
+        hide($content['comments']);
+        hide($content['links']);
+        print render($content);
+        print render($content['links']); 
+      ?>
+    </div>
   </div>
-
-  <?php print render($content['links']); ?>
 
   <?php print render($content['comments']); ?>
 
