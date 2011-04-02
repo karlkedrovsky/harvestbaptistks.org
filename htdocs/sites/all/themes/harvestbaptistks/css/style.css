@@ -275,7 +275,7 @@ box-shadow: 0 0 5px 5px #595959; }
   width: 360px;
 }
 .front #content-top ul li {
-  background-color: #4186d3;
+  background-color: #0d56a6;
   background-image: -moz-linear-gradient(100% 100% 90deg, #0d56a6, #4186d3);
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#4186d3), to(#0d56a6));
   background-image: -webkit-linear-gradient(#0d56a6, #4186d3); 
@@ -286,7 +286,7 @@ box-shadow: 0 0 5px 5px #595959; }
   border-bottom: 1px solid #fff;
 }
 .front #content-top ul li.last {
-  border-bottom: none;
+  border-bottom: 1px solid #0d56a6;
 }
 .front #content-top ul li a {
   font-size: 20px;
