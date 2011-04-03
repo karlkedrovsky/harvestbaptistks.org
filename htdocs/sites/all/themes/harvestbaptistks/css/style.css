@@ -326,7 +326,12 @@ box-shadow: 0 0 5px 5px #595959; }
 
 #content-middle { marging-top: 20px; margin-bottom:20px; }
 #content-middle h1 { padding: 0; }
-#content-middle #main-content { padding: 10px 0 0 0; }
+
+#main-content { padding: 10px 0 0 0; }
+#main-content .field-type-taxonomy-term-reference .field-items .field-item {
+  float: left;
+  padding-right: 7px;
+}
 
 #content-bottom {
   marging-top: 20px;
@@ -340,11 +345,6 @@ box-shadow: 0 0 5px 5px #595959; }
 }
 #content-bottom .block .views-row {
   padding: 0 10px 10px 10px;
-}
-#content-bottom .block p,
-.region-sidebar .block p {
-  padding-left: 10px;
-  padding-right: 10px;
 }
 #content-bottom .block h2,
 .region-sidebar .block h2 {
@@ -361,11 +361,22 @@ box-shadow: 0 0 5px 5px #595959; }
   margin-bottom: 20px;
   padding-bottom: 10px;
 }
+
+/* *** Could this be more generic??? *** */
+#content-bottom .block .content,
+.region-sidebar .block .content {
+  padding: 0 10px 0 10px;
+}
 .region-sidebar .block ul {
+  width: auto;
   padding-left: 5px;
 }
 .region-sidebar .block ul li {
   list-style: none;
+}
+
+.block .views-row {
+  margin: 0;
 }
 
 #footer { marging-top: 20px; margin-bottom:20px; }
