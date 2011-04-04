@@ -227,8 +227,11 @@ a:hover {
 
 body { background-color: #8b8b8b; }
 
-p { line-height: 1.5em; }
-.submitted { margin: 5px 0 5px 0; font-style: italic; }
+p,
+.views-field-body {
+  line-height: 1.5em;
+}
+.submitted { margin: 5px 0 5px 0; font-style: italic; color: #999; }
 ul.inline li { padding: 0 10px 0 0; }
 ul.inline li.node-readmore,
 .readmore { 
@@ -246,7 +249,10 @@ ul.inline li.node-readmore a:hover,
   color: #efefef;
 }
 
-.content p { margin-bottom: 10px; }
+.content p,
+.content .view-content {
+  margin-bottom: 10px;
+}
 #main-content .content p img { padding: 5px; }
 
 #page { background-color: #fff; padding-bottom: 10px; margin-bottom: 40px; border-radius: 0 0 10px 10px / 0 0 10px 10px; -moz-border-radius: 0 0 10px 10px / 0 0 10px 10px; 
@@ -277,8 +283,8 @@ box-shadow: 0 0 5px 5px #595959; }
 .front #content-top ul li {
   background-color: #0d56a6;
   background-image: -moz-linear-gradient(100% 100% 90deg, #0d56a6, #4186d3);
-  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#4186d3), to(#0d56a6));
-  background-image: -webkit-linear-gradient(#0d56a6, #4186d3); 
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#0d56a6), to(#4186d3));
+  background-image: -webkit-linear-gradient(#4186d3, #0d56a6); 
   background-image: -o-linear-gradient(top, #0d56a6, #4186d3);
   list-style: none;
   margin: 0;
@@ -300,8 +306,8 @@ box-shadow: 0 0 5px 5px #595959; }
 #primary-nav {
   background-color: #ff5900;
   background-image: -moz-linear-gradient(100% 100% 90deg, #ff5900, #fd813f);
-  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fd813f), to(#ff5900));
-  background-image: -webkit-linear-gradient(#ff5900, #fd813f); 
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ff5900), to(#fd813f));
+  background-image: -webkit-linear-gradient(#fd813f, #ff5900); 
   background-image: -o-linear-gradient(top, #ff5900, #fd813f);
   padding: 0;
   margin: 0 0 40px 0px;
@@ -343,15 +349,12 @@ box-shadow: 0 0 5px 5px #595959; }
   -moz-border-radius: 10px;
   border-radius: 10px;
 }
-#content-bottom .block .views-row {
-  padding: 0 10px 10px 10px;
-}
 #content-bottom .block h2,
 .region-sidebar .block h2 {
   padding: 8px 10px 10px 10px;
   background-image: -moz-linear-gradient(100% 100% 90deg, #fff, #eaeaea);
-  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#eaeaea), to(#fff));
-  background-image: -webkit-linear-gradient(#fff, #eaeaea); 
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff), to(#eaeaea));
+  background-image: -webkit-linear-gradient(#eaeaea, #fff); 
   background-image: -o-linear-gradient(top, #fff, #eaeaea);
   border-radius: 8px 8px 0 0 / 8px 8px 0 0;
   -moz-border-radius: 8px 8px 0 0 / 8px 8px 0 0;
@@ -379,8 +382,30 @@ box-shadow: 0 0 5px 5px #595959; }
   margin: 0;
 }
 
-#footer { marging-top: 20px; margin-bottom:20px; }
-#footer ul li { margin:0; padding:0 10px 0 10px; list-style:none; float:left; border-right:1px solid #444; }
+#footer {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+#footer .footer-inner {
+  padding-top: 10px;
+  border-top: 1px solid #eaeaea;
+}
+#footer .block ul.menu {
+  display: inline-block;
+  overflow: hidden;
+  line-height: 1em;
+}
+#footer .block ul li {
+  margin: 0;
+  padding: 0 10px 0 10px;
+  list-style: none;
+  float: left;
+  border-right: 1px solid #999;
+}
+#footer .block ul li.last {
+  border-right: none;
+}
 
 .node-teaser .content .submitted {
   float: left;
@@ -392,8 +417,8 @@ box-shadow: 0 0 5px 5px #595959; }
   -moz-border-radius: 10px;
   border-radius: 10px;
   background-image: -moz-linear-gradient(100% 100% 90deg, #fff, #eaeaea);
-  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#eaeaea), to(#fff));
-  background-image: -webkit-linear-gradient(#fff, #eaeaea); 
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff), to(#eaeaea));
+  background-image: -webkit-linear-gradient(#eaeaea, #fff); 
   background-image: -o-linear-gradient(top, #fff, #eaeaea);
   border-radius: 8px;
   -moz-border-radius: 8px;

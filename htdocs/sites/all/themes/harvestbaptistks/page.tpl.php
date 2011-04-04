@@ -61,7 +61,9 @@
   
   <?php if ($page['footer']): ?>
     <div id="footer" class="clearfix">
-      <?php print render($page['footer']); ?>
+      <div class="footer-inner grid_12">
+        <?php print render($page['footer']); ?>
+      </div>
     </div>
   <?php endif; ?>
   

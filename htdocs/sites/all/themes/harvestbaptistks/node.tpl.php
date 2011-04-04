@@ -89,7 +89,7 @@
   <?php endif; ?>
   <?php print render($title_suffix); ?>
 
-  <?php if (!$view_mode == 'teaser' && $display_submitted): ?>
+  <?php if ($view_mode == 'full' && $display_submitted): ?>
     <div class="submitted">
       <?php print $submitted; ?>
     </div>
