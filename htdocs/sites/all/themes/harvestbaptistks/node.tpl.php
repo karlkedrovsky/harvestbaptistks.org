@@ -100,8 +100,10 @@
       <div class="submitted">
         <?php print $submitted; ?>
       </div>
+      <div class="content-inner with-submitted">
+    <?php else: ?>
+      <div class="content-inner">
     <?php endif; ?>
-    <div class="content-inner">
       <?php
         // We hide the comments and links now so that we can render them later.
         hide($content['comments']);

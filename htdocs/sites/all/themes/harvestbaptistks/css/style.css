@@ -188,8 +188,11 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-size: 36px;
 }
-h2, h3, h4, h5, h6 {
+h2 {
   font-size: 20px;
+}
+h3, h4, h5, h6 {
+  font-size: 16px;
 }
 h2 a, h3 a, h4 a, h5 a, h6 a, .views-field-title a {
   color: #ff5900;
@@ -394,6 +397,21 @@ ul.inline li.node-readmore a:hover,
   float: left;
   padding-right: 7px;
 }
+#main-content .downloadable-files {
+  border: 1px solid #eaeaea;
+  padding: 10px;
+  float: right;
+  margin: 0 5px 10px 10px;
+}
+#main-content .downloadable-files h3 {
+  margin-bottom: 5px;
+}
+#main-content .downloadable-files ul li {
+  list-style: none; 
+}
+#main-content .content-node .field {
+  margin-bottom: 10px;
+}
 
 #content-bottom {
   marging-top: 20px;
@@ -479,7 +497,7 @@ ul.inline li.node-readmore a:hover,
   border-radius: 8px;
   -moz-border-radius: 8px;
 }
-.node-teaser .content .content-inner {
+.node-teaser .content .content-inner.with-submitted {
   float: left;
   width: 540px;
 }

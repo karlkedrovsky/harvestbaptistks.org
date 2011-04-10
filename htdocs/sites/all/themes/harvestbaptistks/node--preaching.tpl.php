@@ -80,6 +80,14 @@
  */
 ?>
 <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
+  <?php
+    // We hide the files, comments and links now so that we can render outside the normal content.
+    hide($content['field_sermon_notes']);
+    hide($content['field_study_notes']);
+    hide($content['field_audio_file']);
+    hide($content['comments']);
+    hide($content['links']);
+  ?>
 
   <?php print $user_picture; ?>
 
@@ -104,18 +112,19 @@
     <?php else: ?>
       <div class="content-inner">
     <?php endif; ?>
-      <?php
-        // We hide the comments and links now so that we can render them later.
-        hide($content['comments']);
-        hide($content['links']);
-      ?>
       <?php if ($view_mode == 'full'): ?>
         <div class="downloadable-files">
           <h3>Dowloads</h3>
           <ul>
-            <li>Sermon Notes</li>
-            <li>Study Notes</li>
-            <li>Audio File</li>
+            <?php if (isset($content['field_sermon_notes'])): ?>
+              <li><?php print render($content['field_sermon_notes']); ?></li>
+            <?php endif; ?>
+            <?php if (isset($content['field_study_notes'])): ?>
+              <li><?php print render($content['field_study_notes']); ?></li>
+            <?php endif; ?>
+            <?php if (isset($content['field_audio_file'])): ?>
+              <li><?php print render($content['field_audio_file']); ?></li>
+            <?php endif; ?>
           </ul>
         </div>
       <?php endif; ?>
