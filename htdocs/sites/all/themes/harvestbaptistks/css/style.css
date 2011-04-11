@@ -410,6 +410,10 @@ ul.inline li.node-readmore a:hover,
 #main-content .downloadable-files h3 {
   margin-bottom: 5px;
 }
+#main-content .downloadable-files ul {
+  margin: 0;
+  padding: 0;
+}
 #main-content .downloadable-files ul li {
   list-style: none; 
 }
