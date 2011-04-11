@@ -393,6 +393,10 @@ ul.inline li.node-readmore a:hover,
 #main-content {
   padding: 10px 0 0 0;
 }
+#main-content .content ul {
+  margin-left: 20px;
+  padding-bottom: 10px;
+}
 #main-content .field-type-taxonomy-term-reference .field-items .field-item {
   float: left;
   padding-right: 7px;
@@ -506,6 +510,9 @@ ul.inline li.node-readmore a:hover,
   margin-bottom: 10px;
   padding-bottom: 20px; 
   border-bottom: 1px solid #eaeaea;
+}
+.views-row-last .node-teaser .content-inner {
+  border-bottom: none;
 }
 
 /**
