@@ -393,7 +393,8 @@ ul.inline li.node-readmore a:hover,
 #main-content {
   padding: 10px 0 0 0;
 }
-#main-content .content ul {
+#main-content .content ul, 
+#main-content .content ol {
   margin-left: 20px;
   padding-bottom: 10px;
 }
