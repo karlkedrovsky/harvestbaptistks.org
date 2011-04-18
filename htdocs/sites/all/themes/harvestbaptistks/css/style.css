@@ -233,8 +233,9 @@ body {
 }
 
 blockquote {
-  padding-left: 10px;
+  padding: 0 40px 0 40px;
   font-style: italic;
+  color: #666;
 }
 
 p,
