@@ -442,6 +442,7 @@ ul.inline li.node-readmore a:hover,
   -moz-border-radius: 10px;
   border-radius: 10px;
 }
+/*
 #content-bottom .block h2,
 .region-sidebar .block h2 {
   padding: 8px 10px 10px 10px;
@@ -449,6 +450,17 @@ ul.inline li.node-readmore a:hover,
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#eaeaea), to(#fff));
   background-image: -webkit-linear-gradient(#eaeaea, #fff); 
   background-image: -o-linear-gradient(top, #fff, #eaeaea);
+  border-radius: 8px 8px 0 0 / 8px 8px 0 0;
+  -moz-border-radius: 8px 8px 0 0 / 8px 8px 0 0;
+}
+*/
+
+#content-bottom .block h2,
+.region-sidebar .block h2 {
+  padding: 8px 10px 5px 10px;
+  margin-bottom: 10px;
+  background-color: #4186d3;
+  color: #fff;
   border-radius: 8px 8px 0 0 / 8px 8px 0 0;
   -moz-border-radius: 8px 8px 0 0 / 8px 8px 0 0;
 }
