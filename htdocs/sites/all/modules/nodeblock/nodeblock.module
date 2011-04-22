@@ -80,8 +80,8 @@ function nodeblock_form_alter(&$form, &$form_state, $form_id) {
         '#title' => t('Block translation options'),
         '#tree' => TRUE,
       );
-      //This may need to be reworked, but it's giving an undefined error so it should be checked first.
-      $nodeblock_translation_fallback = isset($node->nodeblock_translation_fallback) ? $node->nodeblock_translation_fallback : '';
+
+      $nodeblock_translation_fallback = variable_get('nodeblock_translation_fallback_'.$node->nid, '0');
       $form['nodeblock']['translation_fallback'] = array(
         '#type' => 'checkbox',
         '#title' => t('Enable translation fallback?'),
@@ -183,10 +183,15 @@ function nodeblock_block_view($delta = '') {
     global $language;
     $translations = translation_node_get_translations($node->tnid);
     $lang = $language->language;
+    $nodeblock_translation_fallback = variable_get('nodeblock_translation_fallback_'.$node->nid, '0');
+
     if ($translations[$language->language]) {
       $node = node_load($translations[$language->language]->nid);
     }
-    elseif (!$node->nodeblock_translation_fallback) {
+    else if($node->language == $language->language){
+
+    }
+    elseif (!$nodeblock_translation_fallback && isset($node->language) && $node->language != 'und' ) {
       // if no translation was found, and not using the fallback option
       // return nothing, so the block doesn't display.
       return;
@@ -243,7 +248,6 @@ function nodeblock_block_configure($delta = '') {
     }
     variable_set('nodeblock_block_' . $delta, array('view_mode' => $defaults['view_mode'], 'links' => $defaults['links']));
   }
-
 
    // Add a Node Block Group
   $form['nodeblock'] = array(
