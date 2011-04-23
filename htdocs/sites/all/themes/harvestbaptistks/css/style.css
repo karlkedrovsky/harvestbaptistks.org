@@ -306,7 +306,7 @@ ul.inline li.node-readmore a:hover,
 }
 #site-slogan p {
   padding-top: 5px;
-  font-style: italic;
+  text-align: center;
 }
 
 .front #content-top {
