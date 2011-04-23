@@ -287,9 +287,8 @@ ul.inline li.node-readmore a:hover,
 }
 
 #header {
-  width: 940px;
   margin: 0;
-  padding: 20px 0 20px 10px;
+  padding: 20px 0 20px 0;
   color: #fff;
 }
 #site-name {
@@ -301,6 +300,13 @@ ul.inline li.node-readmore a:hover,
 }
 #site-name .dark-grey {
   color: #595959;
+}
+#site-slogan {
+  color: #595959;
+}
+#site-slogan p {
+  padding-top: 5px;
+  font-style: italic;
 }
 
 .front #content-top {

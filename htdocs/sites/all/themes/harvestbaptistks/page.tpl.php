@@ -1,11 +1,11 @@
 <div id="page" class="container_12">
 
-  <div id="header" class="grid_12 clearfix">
+  <div id="header" class="clearfix">
     <?php if ($site_name): ?>
-      <div id="site-name"><a href="/"><span class="orange">Harvest</span> <span class="dark-grey">Baptist Church</span><?php //print $site_name; ?></a></div>
+      <div id="site-name" class="<?php print ($site_slogan) ? 'grid_9' : 'grid_12'; ?>"><a href="/"><span class="orange">Harvest</span> <span class="dark-grey">Baptist Church</span><?php //print $site_name; ?></a></div>
     <?php endif; ?>
     <?php if ($site_slogan): ?>
-      <div id="site-slogan"><?php print $site_slogan; ?></div>
+      <div id="site-slogan" class="<?php print ($site_name) ? 'grid_3' : 'grid_12'; ?>"><p><?php print $site_slogan; ?></p></div>
     <?php endif; ?>
   </div>
 
