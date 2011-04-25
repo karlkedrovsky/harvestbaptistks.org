@@ -30,7 +30,9 @@
     <?php else: ?>
       <div class="content-inner">
     <?php endif; ?>
-      <?php if ($view_mode == 'full'): ?>
+      <?php if ($view_mode == 'full' && 
+        (isset($content['field_preaching_notes']['#object']) ||
+         isset($content['field_audio_file']['#object']))): ?>
         <div class="downloadable-files">
           <h3>Dowloads</h3>
           <ul>
