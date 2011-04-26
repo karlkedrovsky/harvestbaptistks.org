@@ -333,7 +333,7 @@ ini_set('session.cookie_lifetime', 2000000);
  * theme. It is located inside 'modules/system/maintenance-page.tpl.php'.
  * Note: This setting does not apply to installation and update pages.
  */
-# $conf['maintenance_theme'] = 'bartik';
+$conf['maintenance_theme'] = 'harvestbaptistks';
 
 /**
  * Enable this setting to determine the correct IP address of the remote
