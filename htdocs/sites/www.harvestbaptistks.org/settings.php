@@ -185,7 +185,7 @@ $databases = array (
     array (
       'database' => 'harvestbaptistks',
       'username' => 'harvestbaptistks',
-      'password' => '',
+      'password' => 'VUJQRXpS',
       'host' => 'localhost',
       'port' => '',
       'driver' => 'mysql',
