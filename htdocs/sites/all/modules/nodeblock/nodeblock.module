@@ -154,11 +154,10 @@ function nodeblock_block_info() {
       // Fetch all nodes of this type, excluding translations.
       $request = db_select('node', 'n')
         ->fields('n', array('nid', 'title'))
-        ->condition('type', $type->type)
-        ->condition('status', 1)
-        ->condition(db_or()->condition('nid', 'tnid')->condition('tnid', 0));
+        ->condition('n.type', $type->type)
+        ->condition('n.status', 1)
+        ->condition(db_or()->where('n.nid = n.tnid')->condition('n.tnid', 0));
       $result = $request->execute();
-     
       foreach ($result as $node) {
         $blocks[$node->nid] = array('info' => $node->title . ' (nodeblock)');
       }
