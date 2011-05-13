@@ -222,6 +222,9 @@ a:hover {
   color: #ff5900;
 }
 
+em {
+  font-style: italic;
+}
 
 /**
  * Primary styles
