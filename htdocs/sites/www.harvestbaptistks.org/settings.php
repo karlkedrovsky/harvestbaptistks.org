@@ -1,4 +1,5 @@
 <?php
+require_once($_SERVER['DRUPAL_CONFIG'] . 'www.harvestbaptistks.org.php');
 // $Id: default.settings.php,v 1.51 2010/10/11 23:49:48 dries Exp $
 
 /**
@@ -183,10 +184,10 @@ $databases = array (
   array (
     'default' => 
     array (
-      'database' => 'harvestbaptistks',
-      'username' => 'harvestbaptistks',
-      'password' => 'VUJQRXpS',
-      'host' => 'localhost',
+      'database' => $db_name,
+      'username' => $db_user,
+      'password' => $db_pass,
+      'host' => $db_host,
       'port' => '',
       'driver' => 'mysql',
       'prefix' => '',
@@ -224,7 +225,7 @@ $update_free_access = FALSE;
  *   $drupal_hash_salt = file_get_contents('/home/example/salt.txt');
  *
  */
-$drupal_hash_salt = '4eUy7Noeck1vvnDQGxWaYefncAlJEJ2H-T9sIqTgSkw';
+$drupal_hash_salt = $hash_salt;
 
 /**
  * Base URL (optional).
