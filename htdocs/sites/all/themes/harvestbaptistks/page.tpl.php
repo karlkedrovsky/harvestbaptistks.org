@@ -1,11 +1,16 @@
 <div id="page" class="container_12">
 
   <div id="header" class="clearfix">
+    <?php if ($page['header']): ?>
+      <div id="content-header" class="grid_12 clearfix">
+          <?php print render($page['header']); ?>
+      </div>
+    <?php endif; ?>
     <?php if ($site_name): ?>
-      <div id="site-name" class="<?php print ($site_slogan) ? 'grid_9' : 'grid_12'; ?>"><a href="/"><span class="orange">Harvest</span> <span class="dark-grey">Baptist Church</span><?php //print $site_name; ?></a></div>
+      <div id="site-name" class="<?php print ($site_slogan) ? 'grid_8' : 'grid_12'; ?>"><a href="/"><span class="orange">Harvest</span> <span class="dark-grey">Baptist Church</span><?php //print $site_name; ?></a></div>
     <?php endif; ?>
     <?php if ($site_slogan): ?>
-      <div id="site-slogan" class="<?php print ($site_name) ? 'grid_3' : 'grid_12'; ?>"><p><?php print $site_slogan; ?></p></div>
+      <div id="site-slogan" class="<?php print ($site_name) ? 'grid_4' : 'grid_12'; ?>"><p><?php print $site_slogan; ?></p></div>
     <?php endif; ?>
   </div>
 
@@ -21,13 +26,12 @@
     </div>
   <?php endif; ?>
 
-  <div id="content-middle" class="clearfix">
+  <div id="content-middle" class="">
     <?php if ($page['sidebar']): ?>
-      <div class="grid_9">
+      <div class="<?php print ($is_front) ? 'grid_7' : 'grid_9'; ?>">
     <?php else: ?>
-      <div class="grid_12">
+      <div class="grid_12 clearfix">
     <?php endif; ?>
-      <?php //print $breadcrumb; ?>
       <?php print render($title_prefix); ?>
       <?php if ($title): ?>
         <h1 class="title" id="page-title"><?php print $title; ?></h1>
@@ -43,7 +47,7 @@
       </div>
     </div>
     <?php if ($page['sidebar']): ?>
-      <div class="grid_3">
+      <div class="<?php print ($is_front) ? 'grid_5' : 'grid_3'; ?>" clearfix">
         <?php print render($page['sidebar']); ?>
       </div>
     <?php endif; ?>

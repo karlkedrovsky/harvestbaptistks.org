@@ -291,13 +291,40 @@ ul.inline li.node-readmore a:hover,
 
 #header {
   margin-top: 20px;
-  padding: 20px 0 20px 0;
+  padding: 20px 0 10px 0;
+  color: #fff;
+}
+#content-header ul.menu {
+  margin: 0;
+  padding: 0 10px 10px 10px;
+  vertical-align: middle;
+  float: right;
+}
+#content-header ul.menu li {
+  margin: 0;
+  padding: 5px;
+  list-style: none;
+  float: left;
+}
+#content-header ul.menu li.first {
+  padding-left: 0;
+}
+#content-header ul.menu li.last {
+  padding-right: 0;
+}
+#content-header ul.menu li a {
+  padding: 3px 7px 3px 7px; 
+  background-color: #4186d3; 
+  border-radius: 10px;
+  -moz-border-radius: 10px;
   color: #fff;
 }
 #site-name {
   font-family: 'Josefin Sans';
   font-size: 64px;
-  font-weight: bold; }
+  font-weight: bold; 
+  margin-top: -20px;
+}
 #site-name .orange {
   color: #ff5900;
 }
@@ -322,6 +349,7 @@ ul.inline li.node-readmore a:hover,
   margin: 0 0 -4px 0;
   padding: 0;
 }
+/*
 .front #content-top ul {
   margin: 0;
   padding: 0;
@@ -349,6 +377,10 @@ ul.inline li.node-readmore a:hover,
 .front #content-top ul li a:hover {
   color: #efefef;
 }
+*/
+.front h1.title {
+  color: #595959;
+}
 
 #primary-nav {
   background-color: #ff5900;
@@ -359,7 +391,7 @@ ul.inline li.node-readmore a:hover,
   background-image: -o-linear-gradient(top, #ff5900, #fd813f);
   */
   padding: 0;
-  margin: 0 0 40px 0px;
+  margin: 0 0 20px 0px;
   font-size: 16px;
   width: 960px;
 }
@@ -451,6 +483,10 @@ ul.inline li.node-readmore a:hover,
   -moz-border-radius: 10px;
   border-radius: 10px;
 }
+#content-bottom .block.block-nodeblock,
+.region-sidebar .block.block-nodeblock {
+  border: none;
+}
 /*
 #content-bottom .block h2,
 .region-sidebar .block h2 {
@@ -478,11 +514,18 @@ ul.inline li.node-readmore a:hover,
   margin-bottom: 20px;
   padding-bottom: 10px;
 }
+.region-sidebar .block.block-nodeblock {
+  padding: 0;
+}
 
 /* *** Could this be more generic??? *** */
 #content-bottom .block .content,
 .region-sidebar .block .content {
   padding: 0 10px 0 10px;
+}
+#content-bottom .block.block-nodeblock .content,
+.region-sidebar .block.block-nodeblock .content {
+  padding: 0;
 }
 .region-sidebar .block ul {
   width: auto;

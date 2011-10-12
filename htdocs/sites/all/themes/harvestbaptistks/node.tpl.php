@@ -96,7 +96,7 @@
   <?php endif; ?>
 
   <div class="content clearfix"<?php print $content_attributes; ?>>
-    <?php if ($view_mode == 'teaser' && $display_submitted): ?>
+    <?php if ($view_mode == 'teaser' && $display_submitted && !$is_front): ?>
       <div class="submitted">
         <?php print $submitted; ?>
       </div>
