@@ -1,3 +1,4 @@
 htdocs/sites/*/files/*
 htdocs/sites/*/private/*
+htdocs/cache
 
