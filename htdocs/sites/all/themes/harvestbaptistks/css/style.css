@@ -296,7 +296,7 @@ ul.inline li.node-readmore a:hover,
 }
 #content-header ul.menu {
   margin: 0;
-  padding: 0 10px 10px 10px;
+  padding: 0 0 10px 10px;
   vertical-align: middle;
   float: right;
 }
@@ -336,7 +336,7 @@ ul.inline li.node-readmore a:hover,
 }
 #site-slogan p {
   padding-top: 5px;
-  text-align: center;
+  text-align: justify;
 }
 
 .front #content-top {
