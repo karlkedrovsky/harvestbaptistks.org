@@ -6,6 +6,8 @@ core = 7.x
 stylesheets[all][] = css/style.css
 stylesheets[all][] = css/960.css
 
+scripts[] = js/script.js
+
 regions[header]         = Header
 regions[content_top]    = Content Top
 regions[sidebar]        = Sidebar
