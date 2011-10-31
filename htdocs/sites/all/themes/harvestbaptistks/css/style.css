@@ -194,16 +194,14 @@ h2 {
 h3, h4, h5, h6 {
   font-size: 16px;
 }
-h2 a, h3 a, h4 a, h5 a, h6 a, .views-field-title a {
-  color: #ff5900;
-  text-decoration: none;
-}
 h2 a:active, h2 a:visited,
 h3 a:active, h3 a:visited,
 h4 a:active, h4 a:visited,
 h5 a:active, h5 a:visited,
 h6 a:active, h6 a:visited,
-.views-field-title a, {
+.views-field-title a,
+.views-field-title a:visited,
+.node-teaser h2 a {
   color: #ff5900;
   text-decoration: none;
 }
@@ -214,12 +212,15 @@ a:visited {
   color: #0d56a6;
   text-decoration: none;
 }
-a:hover {
+a:hover,
+h2 a:hover,
+h3 a:hover,
+h4 a:hover,
+h5 a:hover,
+h6 a:hover,
+.views-field-title a:hover,
+.node-teaser h2 a:hover {
   color: #4186d3;
-}
-.views-field-title a:active, 
-.views-field-title a:visited {
-  color: #ff5900;
 }
 
 em {
