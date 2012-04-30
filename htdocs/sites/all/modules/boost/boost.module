@@ -589,20 +589,31 @@ function boost_cookie_handler() {
 
   // Check if Drupal is started from index.php - could cause problems with other
   // contrib modules like ad module.
+  if (strpos($_SERVER['SCRIPT_FILENAME'], 'index.php') === FALSE) {
+    return;
+  }
+
   $uid = isset($user->uid) ? $user->uid : 0;
-  if (strpos($_SERVER['SCRIPT_FILENAME'], 'index.php') !== FALSE) {
-    // Remove Boost cookie at logout if it still exists.
-    if (isset($_COOKIE[BOOST_COOKIE]) && $uid == 0) {
-      boost_set_cookie($uid, REQUEST_TIME - 86400);
-    }
-    // Remove Boost cookie if set to -1.
-    elseif (isset($_COOKIE[BOOST_COOKIE]) && $_COOKIE[BOOST_COOKIE] == '-1') {
-      boost_set_cookie($uid, REQUEST_TIME - 86400);
-    }
-    // Set Boost cookie if it doesn't exists and user is logged in.
-    elseif (!isset($_COOKIE[BOOST_COOKIE]) && $uid != 0) {
-      boost_set_cookie($uid);
-    }
+  // Remove Boost cookie at logout if it still exists.
+  if (isset($_COOKIE[BOOST_COOKIE]) && $uid == 0) {
+    boost_set_cookie($uid, REQUEST_TIME - 86400);
+  }
+  // Remove Boost cookie if set to -1 & Request Method is a GET/HEAD.
+  elseif (isset($_COOKIE[BOOST_COOKIE]) && $_COOKIE[BOOST_COOKIE] == '-1' && ($_SERVER['REQUEST_METHOD'] == 'GET' || $_SERVER['REQUEST_METHOD'] == 'HEAD')) {
+    boost_set_cookie($uid, REQUEST_TIME - 86400);
+  }
+  // Set Boost cookie if it doesn't exists and user is logged in.
+  elseif (!isset($_COOKIE[BOOST_COOKIE]) && $uid != 0) {
+    boost_set_cookie($uid);
+  }
+
+  // Issue #1242416: Set a nocache cookie on a POST, remove it immediately after
+  // (on GET) Only necessary for anon users, since we already do not cache for
+  // logged in users. Also note that if we are processing a GET, it means that
+  // we have already been through the htaccess rules, so the cookie has done
+  // its job and can be removed.
+  if ($uid == 0 && $_SERVER['REQUEST_METHOD'] != 'GET' && $_SERVER['REQUEST_METHOD'] != 'HEAD') {
+    boost_set_cookie(-1);
   }
 }
 
@@ -1086,8 +1097,9 @@ function _boost_rmdir($dir, $flush = TRUE) {
       }
     }
   }
-  if ($empty_dir) {
-    rmdir($dir);
+  if ($empty_dir && is_dir($dir)) {
+    // #1138630 @ error suppression used due to rmdir being a race condition.
+    @rmdir($dir);
   }
   return $counter;
 }
