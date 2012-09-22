@@ -81,6 +81,11 @@
 ?>
 <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
 
+  <?php
+    // We hide the files now so that we can render outside the normal content.
+    hide($content['field_files']);
+  ?>
+
   <?php print $user_picture; ?>
 
   <?php print render($title_prefix); ?>
@@ -104,6 +109,14 @@
     <?php else: ?>
       <div class="content-inner">
     <?php endif; ?>
+      <?php if ($view_mode == 'full' && (isset($content['field_files']['#object']))): ?>
+        <div class="downloadable-files">
+          <h3>Dowloads</h3>
+          <ul>
+            <li><?php print render($content['field_files']); ?></li>
+          </ul>
+        </div>
+      <?php endif; ?>
       <?php
         // We hide the comments and links now so that we can render them later.
         hide($content['comments']);
